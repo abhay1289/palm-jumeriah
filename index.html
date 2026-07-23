@@ -1076,7 +1076,7 @@ section[id]{scroll-margin-top:88px;}
 <section class="hero" id="hero">
   <div class="editorial-vertical" style="color: rgba(255,255,255,0.25);">25.1124° N, 55.1390° E &nbsp; | &nbsp; CAESAR PALM JUMEIRAH</div>
   <div class="hero-sticky">
-    <video class="hero-video" id="heroVideo" muted playsinline preload="auto" poster="images/firstposter.jpeg">
+    <video class="hero-video" id="heroVideo" autoplay muted playsinline preload="auto" poster="images/firstposter.jpeg">
       <source src="palm-jumeirah-scrub.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -1383,7 +1383,10 @@ section[id]{scroll-margin-top:88px;}
   function setupScrub(){
     const heads = document.querySelectorAll('.hero-heading');
     const dots = document.querySelectorAll('.hero-progress-dot');
-    video.pause();
+    
+    // iOS Safari Hack: Force video to initialize in memory before pausing
+    video.play().then(() => { video.pause(); }).catch(() => { video.pause(); });
+    
     const hero = document.getElementById('hero');
     const overlay = hero.querySelector('.hero-overlay');
     let last = -1;
