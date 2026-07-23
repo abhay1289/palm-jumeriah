@@ -198,8 +198,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
 .hero-progress{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:5;}
 .hero-progress-dot{width:30px;height:3px;background:rgba(244,233,214,.24);border-radius:3px;transition:background .35s,width .35s,box-shadow .35s;}
 .hero-progress-dot.is-active{background:var(--gold);width:52px;box-shadow:0 0 16px rgba(201,162,78,.6);}
-@media(max-width:768px){.hero{height:100vh;}.hero-sticky{position:relative;}.hero-heading{white-space:normal;}
-  .hero-video{transform:none !important;}}
+@media(max-width:768px){.hero-heading{white-space:normal;}}
 
 /* ============================================================
    MARQUEE
@@ -1382,10 +1381,8 @@ section[id]{scroll-margin-top:88px;}
 
   // ===== Hero scroll-scrub + rotating headings (unchanged) =====
   function setupScrub(){
-    const isMobile = matchMedia('(max-width:768px)').matches;
     const heads = document.querySelectorAll('.hero-heading');
     const dots = document.querySelectorAll('.hero-progress-dot');
-    if (isMobile){ video.loop = true; video.play().catch(()=>{}); return; }
     video.pause();
     const hero = document.getElementById('hero');
     const overlay = hero.querySelector('.hero-overlay');
