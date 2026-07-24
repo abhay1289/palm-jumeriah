@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caesar Palm Jumeirah — Luxury Residences · Palm Jumeirah, Dubai</title>
+<link rel="preload" href="palm-jumeirah-scrub.mp4" as="video" type="video/mp4">
+<link rel="preload" href="images/firstposter.jpeg" as="image">
 <meta name="description" content="Caesar Palm Jumeirah is an impressive residential complex on Palm Jumeirah, Dubai, featuring luxurious studios, 1+1 and 2+1 bedroom apartments with world-class amenities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +102,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
 .btn--dark:hover{background:var(--espresso-2);transform:translateY(-3px);border-color:var(--gold);}
 
 /* reveal on scroll */
-.reveal{opacity:0;transform:translateY(60px) scale(0.98);transition:opacity 2.4s cubic-bezier(0.16, 1, 0.3, 1),transform 2.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);will-change:opacity,transform;}
+.reveal{will-change: transform, opacity;opacity:0;transform:translateY(60px) scale(0.98);transition:opacity 2.4s cubic-bezier(0.16, 1, 0.3, 1),transform 2.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);will-change:opacity,transform;}
 .reveal.in{opacity:1;transform:none;}
 .reveal.d1{transition-delay:.08s;}.reveal.d2{transition-delay:.16s;}.reveal.d3{transition-delay:.24s;}.reveal.d4{transition-delay:.32s;}
 /* Staggered text styles */
@@ -278,8 +280,8 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
 .suites .wrap{position:relative;z-index:2;}
 .suites-head{text-align:center;max-width:640px;margin:0 auto 60px;}
 .suites-head p{color:var(--cream-2);margin-top:16px;}
-.suites-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;perspective:1400px;}
-@media(max-width:900px){.suites-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;}}
+.suites-grid{content-visibility: auto;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;perspective:1400px;}
+@media(max-width:900px){.suites-grid{content-visibility: auto;grid-template-columns:1fr;max-width:440px;margin:0 auto;}}
 .glass-card{position:relative;border-radius:var(--r-lg);overflow:hidden;background:rgba(244,233,214,.07);
   border:1px solid rgba(244,233,214,.16);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);
   box-shadow:0 40px 100px -20px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,0.15);transform-style:preserve-3d;transition:transform .6s var(--spring),box-shadow .6s var(--spring),border-color .6s var(--spring);}
@@ -1058,7 +1060,7 @@ section[id]{scroll-margin-top:88px;}
     <svg class="nav__toggle-open" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 12H10M20 5H4M20 19H4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <svg class="nav__toggle-close" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
-  <a href="#" class="nav__logo"><img src="images/logo.png" alt="Caesar Palm Jumeirah" class="nav__logo-img"></a>
+  <a href="#" class="nav__logo"><img loading="lazy" decoding="async" src="images/logo.png" alt="Caesar Palm Jumeirah" class="nav__logo-img"></a>
   <a href="#cta" class="nav__cta">
     <span class="nav__cta-label">Register Interest</span>
     <span class="nav__cta-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1117,7 +1119,7 @@ section[id]{scroll-margin-top:88px;}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <div class="about__media reveal d2" id="aboutMedia">
-      <img src="images/exterior_tower_pool_view.jpg" alt="About Caesar Palm Jumeirah" class="parallax-img">
+      <img loading="lazy" decoding="async" src="images/exterior_tower_pool_view.jpg" alt="About Caesar Palm Jumeirah" class="parallax-img">
       <div class="about__badge"><b>2024</b><span>Handover</span></div>
     </div>
   </div>
@@ -1161,7 +1163,7 @@ section[id]{scroll-margin-top:88px;}
 
     <div class="stack">
       <article class="stack-card reveal">
-        <img src="images%202/EgN3VvjdOy1lWvOuDvqRC5YaLc.png" alt="Resort pool and amenities">
+        <img loading="lazy" decoding="async" src="images%202/EgN3VvjdOy1lWvOuDvqRC5YaLc.png" alt="Resort pool and amenities">
         <div class="stack-card__scrim"></div>
         <div class="stack-card__no">01 / 04</div>
         <div class="stack-card__body">
@@ -1174,7 +1176,7 @@ section[id]{scroll-margin-top:88px;}
       </article>
 
       <article class="stack-card reveal">
-        <img src="images%202/up9un9utSbgpaOajxmRC4GPLFTA.png" alt="Pool courtyard with modern architecture">
+        <img loading="lazy" decoding="async" src="images%202/up9un9utSbgpaOajxmRC4GPLFTA.png" alt="Pool courtyard with modern architecture">
         <div class="stack-card__scrim"></div>
         <div class="stack-card__no">02 / 04</div>
         <div class="stack-card__body">
@@ -1187,7 +1189,7 @@ section[id]{scroll-margin-top:88px;}
       </article>
 
       <article class="stack-card reveal">
-        <img src="images/exterior_tower_view_closeup_04_768x432.jpg" alt="Modern tower architecture">
+        <img loading="lazy" decoding="async" src="images/exterior_tower_view_closeup_04_768x432.jpg" alt="Modern tower architecture">
         <div class="stack-card__scrim"></div>
         <div class="stack-card__no">03 / 04</div>
         <div class="stack-card__body">
@@ -1200,7 +1202,7 @@ section[id]{scroll-margin-top:88px;}
       </article>
 
       <article class="stack-card reveal">
-        <img src="images/interior_apartment_11_living_5_Interactive-LightMix0000_768x886.jpg" alt="Luxury apartment interior">
+        <img loading="lazy" decoding="async" src="images/interior_apartment_11_living_5_Interactive-LightMix0000_768x886.jpg" alt="Luxury apartment interior">
         <div class="stack-card__scrim"></div>
         <div class="stack-card__no">04 / 04</div>
         <div class="stack-card__body">
@@ -1233,13 +1235,13 @@ section[id]{scroll-margin-top:88px;}
 
     <div class="showcase__thumbs reveal d2">
       <button class="showcase__thumb active" data-img="images%202/GR8RfROFFcqRiI17RtoU6qnQ.jpg" data-title="Luxury Living" data-desc="Experience floor-to-ceiling panoramic views of the Gulf in every detail.">
-        <img src="images%202/GR8RfROFFcqRiI17RtoU6qnQ.jpg" alt="Luxury Living">
+        <img loading="lazy" decoding="async" src="images%202/GR8RfROFFcqRiI17RtoU6qnQ.jpg" alt="Luxury Living">
       </button>
       <button class="showcase__thumb" data-img="images%202/3wI6fKj41ZJKamQEGrOD2VNEw.jpg" data-title="Iconic Architecture" data-desc="Modern design seamlessly blending with the natural surroundings.">
-        <img src="images%202/3wI6fKj41ZJKamQEGrOD2VNEw.jpg" alt="Iconic Architecture">
+        <img loading="lazy" decoding="async" src="images%202/3wI6fKj41ZJKamQEGrOD2VNEw.jpg" alt="Iconic Architecture">
       </button>
       <button class="showcase__thumb" data-img="images%202/y2ohpCvJfyvqvRIPDIXoFfnq0.png" data-title="Resort Amenities" data-desc="Exclusive access to infinity pools, private beaches and more.">
-        <img src="images%202/y2ohpCvJfyvqvRIPDIXoFfnq0.png" alt="Resort Amenities">
+        <img loading="lazy" decoding="async" src="images%202/y2ohpCvJfyvqvRIPDIXoFfnq0.png" alt="Resort Amenities">
       </button>
     </div>
   </div>
